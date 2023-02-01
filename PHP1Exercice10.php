@@ -17,7 +17,7 @@ echo "Montant à payer : $Montantdu € <br> <br>";
 echo "Montant versé : $Montantpaye € <br> <br>";
 if ($Resultat>= 0 && $Restantdu<0) {
   echo "À rendre : $Resultat €<br>" ;
-} elseif   ( $Resultat<0 && $Restantdu>=0) {
+} elseif   ( $Resultat<0 && $Restantdu>=0) { //-> permet de changer le visuel en "reste à payer" si le montant payé est inférieur au dû"
    echo "Reste à payer : $Restantdu € <br>";
 }
 
