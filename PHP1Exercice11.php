@@ -10,12 +10,12 @@ Exemple: tableau ➔«Peugeot», «Renault», «BMW», «Mercedes»
 
 // VARIABLES 
 
-$marques = ["Mercedes", "BMW", "Peugeot", "Renault"]; // ou fonction "array"
+$marques = ["Mercedes", "BMW", "Peugeot", "Renault", "Tesla"]; // ou fonction "array"
 $Nbmarque = count($marques);
 
 // Résultat
 
-if ($Nbmarque > 0)
+if ($Nbmarque >= 0)
     echo "Il y a $Nbmarque marque(s) de voitures dans le tableau : <br> <br>";
 
     foreach($marques as $marque) {      // --> FOREACH .. AS : permet d'afficher en liste vertical la variable souhaitée
