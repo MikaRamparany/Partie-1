@@ -16,10 +16,11 @@ $Restantdu = $Montantdu - $Montantpaye;
 echo "Montant à payer : $Montantdu € <br> <br>";
 echo "Montant versé : $Montantpaye € <br> <br>";
 if ($Resultat>= 0 && $Restantdu<0) {
-    echo "À rendre : $Resultat €<br>" ;
+  echo "À rendre : $Resultat €<br>" ;
 } elseif   ( $Resultat<0 && $Restantdu>=0) {
-    echo "Reste à payer : $Restantdu € <br>";
+   echo "Reste à payer : $Restantdu € <br>";
 }
+
 
 echo "***************************************************************<br> <br>";
 
@@ -27,7 +28,13 @@ echo "***************************************************************<br> <br>";
 
 echo "Rendue de monnaie : <br>";
 
-$MonnaieARendre = $Résultat;
+$Résultat;
 $Nbmonnaie = 0;
 $ListeBillet_pieces = [10, 5, 2, 1];
 
+foreach ($ListeBillet_pieces as $Billet) {
+
+    echo " Billet(s) " . $Billet . " : " . intdiv($Resultat, $Billet); //--> fonction qui permet de diviser des entiers +> ici il permet de diviser le n de billets à rendre.
+
+    $Resultat = $Resultat % $Billet;
+}
