@@ -8,7 +8,7 @@ A partir d’un montant à payer et d’une somme versée pour régler un achat,
 
 // VARIABLES 
 
-$Montantdu = 352;
+$Montantdu =152;
 $Montantpaye = 200;
 $Resultat = $Montantpaye - $Montantdu; 
 $Restantdu = $Montantdu - $Montantpaye;
@@ -16,10 +16,18 @@ $Restantdu = $Montantdu - $Montantpaye;
 echo "Montant à payer : $Montantdu € <br> <br>";
 echo "Montant versé : $Montantpaye € <br> <br>";
 if ($Resultat>= 0 && $Restantdu<0) {
-    echo "À rendre : $Resultat €" ;
+    echo "À rendre : $Resultat €<br>" ;
 } elseif   ( $Resultat<0 && $Restantdu>=0) {
     echo "Reste à payer : $Restantdu € <br>";
 }
 
-echo "***************************************************************";
+echo "***************************************************************<br> <br>";
+
+// Partie rendue de monnaie
+
+echo "Rendue de monnaie : <br>";
+
+$MonnaieARendre = $Résultat;
+$Nbmonnaie = 0;
+$ListeBillet_pieces = [10, 5, 2, 1];
 
