@@ -8,12 +8,12 @@ Nous souhaitons savoir si une personne est imposable en fonction de son âge et 
 
 //VARIABLES 
 
-$Age = 16;
+$Age = 17;
 $Sexe = "F";
 
 echo"Age : $Age <br>";
 echo "Sexe : $Sexe <br>";
-if(gettype($age) >= 18 && gettype($Sexe) == "F" )  { 
+if($Age>= 18 && $Sexe== "F" )  { 
     echo "La personne est imposable. ";
 } elseif ($Sexe=="M" & $Age > 20){
     echo "La personne est imposable.";
