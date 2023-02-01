@@ -6,14 +6,18 @@ Ecrire un algo qui déclare une valeur en francs et qui la convertit en euros. A
 
 // Liste VARIABLES
 
-$chaineDeCaracteres = "Montant en francs : ";
+
 $entier = 100;
-$valeurf= francs;
-$valeur€= €;
-$tauxdechange = 6,55957;
+$valeurf= "francs";
+$valeur€= "€";
+$tauxdechange = 6.55957;
+$résultat = round($entier/$tauxdechange,2);
 
 // Résultat 
 
-echo $chaineDeCaracteres .$entier ;
-echo $entier . $valeurf = $entier / $tauxdechange . $valeur€;
+echo "Montant en francs :" . $entier;
+echo"<br>"; 
+echo"<br>"; 
+
+echo "$entier francs = $résultat"  ;
 
