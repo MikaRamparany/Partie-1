@@ -10,7 +10,7 @@ Exemple: tableau ➔«Peugeot», «Renault», «BMW», «Mercedes»
 
 // VARIABLES 
 
-$marques = ["Mercedes", "BMW", "Peugeot", "Renault", "Tesla"]; // ou fonction "array"
+$marques = ["Mercedes", "BMW", "Peugeot", "Renault", "Tesla", "Fiat"]; // ou fonction "array"
 $Nbmarque = count($marques);
 
 // Résultat
