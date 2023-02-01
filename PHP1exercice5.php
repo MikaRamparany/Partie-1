@@ -10,9 +10,10 @@ $chaineDeCaracteres = "Montant en francs : ";
 $entier = 100;
 $valeurf= francs;
 $valeur€= €;
-$tauxdechange = 0.1524;
+$tauxdechange = 6,55957;
 
 // Résultat 
 
 echo $chaineDeCaracteres .$entier ;
-echo $entier . $valeurf = $entier * $tauxdechange . $valeur€;
+echo $entier . $valeurf = $entier / $tauxdechange . $valeur€;
+
