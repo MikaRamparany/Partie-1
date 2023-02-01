@@ -13,7 +13,7 @@ $Sexe = "F";
 
 echo"Age : $Age <br>";
 echo "Sexe : $Sexe <br>";
-if ($Sexe== "F" & $Age>=17 or $Age<=35) {
+if(gettype($age) >= 18 && gettype($Sexe) == "F" )  { 
     echo "La personne est imposable. ";
 } elseif ($Sexe=="M" & $Age > 20){
     echo "La personne est imposable.";
