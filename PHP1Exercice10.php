@@ -8,7 +8,7 @@ A partir d’un montant à payer et d’une somme versée pour régler un achat,
 
 // VARIABLES 
 
-$Montantdu =152;
+$Montantdu =252;
 $Montantpaye = 200;
 $Resultat = $Montantpaye - $Montantdu; 
 $Restantdu = $Montantdu - $Montantpaye;
@@ -32,9 +32,10 @@ $Résultat;
 $Nbmonnaie = 0;
 $ListeBillet_pieces = [10, 5, 2, 1];
 
-foreach ($ListeBillet_pieces as $Billet) {
-
-    echo " Billet(s) " . $Billet . " : " . intdiv($Resultat, $Billet); //--> fonction qui permet de diviser des entiers +> ici il permet de diviser le n de billets à rendre.
-
-    $Resultat = $Resultat % $Billet;
-}
+foreach ($ListeBillet_pieces as $Billet){
+    if ($Resultat>0)
+    echo intdiv($Resultat, $Billet) ." Billet(s) de " . $Billet ." € - "; //--> intdiv. fonction qui permet de diviser des entiers +> ici il permet de diviser le n de billets à rendre.
+    else 
+    echo " ";
+    $Resultat = $Resultat % $Billet ;
+  } 
