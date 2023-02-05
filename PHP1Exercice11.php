@@ -19,5 +19,5 @@ if ($Nbmarque >= 0)
     echo "Il y a $Nbmarque marque(s) de voitures dans le tableau : <br> <br>";
 
     foreach($marques as $marque) {      // --> FOREACH .. AS : permet d'afficher en liste vertical la variable souhaitée
-    echo "<br> $marque. <br>";
-    }
+    echo "<ul> $marque. </ul>";
+    } 
