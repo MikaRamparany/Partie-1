@@ -28,7 +28,7 @@ foreach ($prenom as $element => $bonjour) {
 }
 echo "<br><br>";
 echo ("Tableau 2<br>");
-
+// ksort pour trier dans l'ordre alpha.
 ksort($prenom);
 foreach ($prenom as $element => $bonjour) {
     echo "<br>";
