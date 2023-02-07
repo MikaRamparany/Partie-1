@@ -15,7 +15,7 @@ class Personne
     private string $_prenom;
     private int $_anniv;
 
-    function __construct(string $_nom, string $_prenom, int $_anniv) //! IMPORTANT : il vaut mieux préciser dans __construct() les typo : string, int ou float(nombre à virgule).
+    function __construct(string $_nom, string $_prenom, int $_anniv) //! IMPORTANT : il vaut mieux préciser dans __construct() les typo strinct : string, int ou float(nombre à virgule).
     {
         $this->nom = $_nom;
         $this->prenom = $_prenom;

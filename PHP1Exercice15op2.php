@@ -15,19 +15,19 @@ $p2 =new Personne("DUCHEMIN","Alice", "1985-01-17");
 
 
 
-// respect des types déclarés des paramètres de fonctions
+// respect des typo stricts déclarés des paramètres de fonctions
 
 class Personne {
     // attributs de la classe
       private string $_prenom;
       private string $_nom;
-      private DateTime $_Datebirth;
+      private DateTime $DateNaissance;
 
-public function __construct(string $_prenom, string $_nom, Int $_Datebirth) {
+public function __construct(string $_prenom, string $_nom, Int $DateNaissance) {
    
     $this->_prenom=$_prenom;
     $this->_nom=$_nom;
-    $this->_Datebirth= new DateTime($_Datebirth);
+    $this->DateNaissance= new DateTime($DateNaissance);
   }
   public function get_prenom(){
     return $this-> _prenom;
@@ -35,17 +35,19 @@ public function __construct(string $_prenom, string $_nom, Int $_Datebirth) {
   public function get_nom() {
     return $this-> _nom;
   }
-  public function get_Datebirth() { 
+  public function getDateNaissance() { 
 
-    return $this->_Datebirth;
+    return $this->DateNaissance;
 
   }
 
   public function AGE()
-  { //On a besoin d'une variable DateToday pour calculer l'âge depuis la date de Naissance
-    $currentDate= new DateTime();
-    $DateToday= $this->_Datebirth->diff($currentDate);
-    return $DateToday-> format("%y ans.");
+  { //On a besoin d'une variable AgeToday pour calculer l'âge depuis la date de Naissance: 
+
+    $DateToday= new DateTime();
+
+    $AgeToday= $this->DateNaissance->diff($DateToday);
+    return $AgeToday-> format("%y ans.");
 
   }
   public function __toString() // Permet d'afficher les public function via ECHO. 
