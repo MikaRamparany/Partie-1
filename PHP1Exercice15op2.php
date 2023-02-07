@@ -1,4 +1,4 @@
-<h1>Exercice 15</h1>
+<h1>Exercice 15 Option 2 : Celle que j'ai trouvé en premier</h1>
 
 <p>Créer une classe Personne (nom, prénom et date de naissance).<br>
 Instancier 2 personnes et afficher leurs informations: nom, prénom et âge.</p>
@@ -11,15 +11,15 @@ $date = new DateTime("2022-11-15");
 
 class Personne
 {
-    private string $nom;
-    private string $prenom;
-    private int $anniv;
+    private string $_nom;
+    private string $_prenom;
+    private int $_anniv;
 
-    function __construct(string $nom, string $prenom, int $anniv)
+    function __construct(string $_nom, string $_prenom, int $_anniv) //! IMPORTANT : il vaut mieux préciser dans __construct() les typo : string, int ou float(nombre à virgule).
     {
-        $this->nom = $nom;
-        $this->prenom = $prenom;
-        $this->anniv = $anniv;
+        $this->nom = $_nom;
+        $this->prenom = $_prenom;
+        $this->_anniv = $_anniv;
     }
 
     function getNom(){
@@ -28,8 +28,8 @@ class Personne
     function getPrenom(){
         return $this->prenom;
     }
-    function getAnniv($date){
-        $ans = $date->diff(new DateTime($this->anniv));
+    function get_Anniv($date){
+        $ans = $date->diff(new DateTime($this->_anniv));
         return $ans->format('%y');
     }
     
@@ -40,8 +40,8 @@ $p2 = new Personne("DUCHEMIN","Alice","1985-01-17");
 
 echo "<form style='background-color:E8E3E2;width: 280px; padding:6px'>";
 
-echo $p1->getPrenom() . " " . $p1->getNom() . " a " . $p1->getAnniv($date) . " ans.<br> <br>";
+echo $p1->getPrenom() . " " . $p1->getNom() . " a " . $p1->get_Anniv($date) . " ans.<br> <br>";
 
-echo $p2->getPrenom() . " " . $p2->getNom() . " a " . $p2->getAnniv($date) . " ans.";
+echo $p2->getPrenom() . " " . $p2->getNom() . " a " . $p2->get_Anniv($date) . " ans.";
 
 echo "</form>";
