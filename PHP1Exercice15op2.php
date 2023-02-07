@@ -23,7 +23,7 @@ class Personne {
       private string $_nom;
       private DateTime $DateNaissance;
 
-public function __construct(string $_prenom, string $_nom, Int $DateNaissance) {
+public function __construct(string $_prenom, string $_nom,  $DateNaissance) {
    
     $this->_prenom=$_prenom;
     $this->_nom=$_nom;
