@@ -23,5 +23,14 @@ public function __construct(string $prenom, string $nom, int $Datebirth) {
     $this->nom=$nom;
     $this->Datebirth=$Datebirth;
   }
+  function getprenom(){
+    return $this-> prenom;
+  } 
+  function getnom() {
+    return $this-> nom;
+  }
+  function getDatebirth() { //! On veut que la fonction GetDatenorth affiche le nombre d'année de la personne alors on doit créer une variable $AGE qui est calculée depuis la DATEBIRTH. comme ci-dessous:
+    $AGE = $Datebirth -> diff(new AgePersonne ($this->$Datebirth));
+    return $AGE = $Datebirth -> format ("%y"); 
 
 }
