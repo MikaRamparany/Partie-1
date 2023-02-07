@@ -1,4 +1,4 @@
-<h1> Exercice 15</h1>
+<h1> Exercice 15 - Option 2 </h1>
 
 Créer une classe Personne (nom, prénom et date de naissance).<br><br>
 Instancier 2 personnes et afficher leurs informations: nom, prénom et âge.
